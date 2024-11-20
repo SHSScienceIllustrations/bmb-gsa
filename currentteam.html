@@ -162,17 +162,23 @@
 
     <script src="calendar.js"></script>
         <!-- JavaScript Section -->
-    <script>
-        // JavaScript to toggle the dropdown menu
-        document.addEventListener('DOMContentLoaded', () => {
-            const burger = document.querySelector('.burger');
-            const navLinks = document.querySelector('.nav-links-mobile');
+<script>
+    // Wait for the DOM to fully load
+    document.addEventListener('DOMContentLoaded', () => {
+        // Select the burger menu and the dropdown menu
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links-mobile');
 
-            burger.addEventListener('click', () => {
-                navLinks.classList.toggle('nav-active'); // Toggle dropdown menu
-            });
+        // Add a click event listener to the burger menu
+        burger.addEventListener('click', () => {
+            // Toggle the 'nav-active' class to show/hide the dropdown
+            navLinks.classList.toggle('nav-active');
+
+            // Add animation to the burger menu (optional)
+            burger.classList.toggle('toggle');
         });
-    </script>
+    });
+</script>
 </body>
 
 </html>
