@@ -15,6 +15,10 @@ body {
 header {
     background-color: #004c8c;
     padding: 20px 10%;
+    display: flex;
+    flex-direction: column; /* Stack items in the header */
+    align-items: center; /* Center-align logo and navigation links */
+    justify-content: center;
 }
 
 nav {
@@ -26,11 +30,13 @@ nav {
 .logo h1 {
     color: #fff;
     font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
+    flex-direction: row; /* Default for desktop */
     gap: 20px;
 }
 
@@ -1365,48 +1371,6 @@ body {
     color: #333;
 }
 
-/* Header */
-
-header {
-    background-color: #004c8c;
-    padding: 20px 10%;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-}
-
-.logo h1 {
-    color: #fff;
-    font-size: 24px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap; /* Ensure links wrap on smaller screens */
-}
-
-.nav-links li {
-    position: relative;
-}
-
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 5px 0;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #ffd700;
-}
-
 /* Responsive Burger Menu */
 
 .burger {
@@ -1542,5 +1506,29 @@ footer {
 
     .welcome-text p {
         font-size: 16px;
+    }
+}
+
+/* Responsive Header for Mobile */
+
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack header elements */
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack navigation links vertically */
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 20px; /* Slightly larger font for mobile */
+        text-align: center; /* Center align links */
+        padding: 10px;
+    }
+
+    .burger {
+        display: none; /* Hide burger menu if not needed */
     }
 }
