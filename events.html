@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Event Calendar - UBC BMB GSA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>UBC BMB GSA</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Event Calendar</a></li>
+                <li><a href="currentteam.html">Current Team</a></li>
+                <li><a href="spotlight.html">Student Spotlight</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="calendar" class="calendar-section">
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <button id="prev-month">←</button>
+                <h2 id="current-month"></h2>
+                <button id="next-month">→</button>
+            </div>
+            <table id="calendar-table">
+                <thead>
+                    <tr>
+                        <th>Sun</th>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Calendar days will be generated here by JavaScript -->
+                </tbody>
+            </table>
+
+            <!-- Calendar table goes here (already implemented) -->
+<table id="calendar-table">
+    <tbody></tbody>
+</table>
+
+<!-- Event Details Side Panel -->
+<div id="event-details-panel" class="hidden">
+    <button class="close-button" onclick="closeEventDetails()">X</button>
+    <div id="event-details-content">
+        <!-- Event details will be dynamically inserted here -->
+    </div>
+</div>
+        </div>
+    </section>
+
+    <script src="calendar.js"></script>
+</body>
+
+</html>
