@@ -21,6 +21,13 @@
             <li><a href="spotlight.html">Student Spotlight</a></li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="events.html">Event Calendar</a></li>
+                <li><a href="currentteam.html">Current Team</a></li>
+                <li><a href="spotlight.html">Student Spotlight</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
     </nav>
 </header>
 
@@ -56,6 +63,19 @@
 <footer>
     <p>UBC BMB GSA &copy; 2024. All rights reserved.</p>
 </footer>
+
+        <!-- JavaScript Section -->
+    <script>
+        // JavaScript to toggle the dropdown menu
+        document.addEventListener('DOMContentLoaded', () => {
+            const burger = document.querySelector('.burger');
+            const navLinks = document.querySelector('.nav-links-mobile');
+
+            burger.addEventListener('click', () => {
+                navLinks.classList.toggle('nav-active'); // Toggle dropdown menu
+            });
+        });
+    </script>
 
 </body>
 </html>
