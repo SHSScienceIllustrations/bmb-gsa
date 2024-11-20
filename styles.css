@@ -67,6 +67,7 @@ nav {
     width: 25px;
     height: 3px;
     background-color: white;
+    transition: all 0.3s ease;
 }
 
 
@@ -1530,5 +1531,52 @@ footer {
 
     .burger {
         display: none; /* Hide burger menu if not needed */
+    }
+}
+
+/* Dropdown Menu */
+
+.nav-links-mobile {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    background-color: #004c8c;
+    position: absolute;
+    top: 70px; /* Below the header */
+    right: 10%;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links-mobile li {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.nav-links-mobile a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.nav-links-mobile a:hover {
+    color: #ffd700;
+}
+
+/* Show Dropdown on Mobile */
+
+.nav-active {
+    display: flex; /* Show the dropdown menu */
+}
+
+/* Responsive Styles for Mobile */
+
+@media only screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide the horizontal nav links */
+    }
+
+    .burger {
+        display: flex; /* Show the burger menu on mobile */
     }
 }
